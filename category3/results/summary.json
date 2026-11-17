@@ -1,0 +1,339 @@
+{
+  "stats": {
+    "lines": 838,
+    "string_match": 196,
+    "actor_match": 170,
+    "drop_stage": 73,
+    "kept": 95,
+    "drop_nonresource": 2
+  },
+  "dropped_by_stage": {
+    "RequestReceived|secrets": 7,
+    "RequestReceived|pods": 52,
+    "ResponseStarted|pods/exec": 1,
+    "RequestReceived|services": 13
+  },
+  "string_only": 26,
+  "sessions": [
+    {
+      "scenario": "normal",
+      "label": "normal",
+      "jti": "e7916877-0d13-4eca-b892-ef8310502a35",
+      "n": 5,
+      "duration": 0.114092,
+      "max_rep": 2,
+      "max_tot": 5,
+      "max_dist": 3,
+      "hits": [],
+      "outcome": {
+        "A": "TN",
+        "B": "TN",
+        "C": "TN",
+        "D": "TN",
+        "E": "TN"
+      }
+    },
+    {
+      "scenario": "normal_2",
+      "label": "normal",
+      "jti": "ff20e208-e904-4c57-91ad-2804d2cd5c6b",
+      "n": 30,
+      "duration": 58.920533,
+      "max_rep": 5,
+      "max_tot": 5,
+      "max_dist": 1,
+      "hits": [
+        "D4"
+      ],
+      "outcome": {
+        "A": "TN",
+        "B": "FP",
+        "C": "FP",
+        "D": "TN",
+        "E": "TN"
+      }
+    },
+    {
+      "scenario": "abnormal_1",
+      "label": "attack",
+      "jti": "6db720cc-6d6d-40db-ac69-acce35efe9e0",
+      "n": 1,
+      "duration": 0.0,
+      "max_rep": 1,
+      "max_tot": 1,
+      "max_dist": 1,
+      "hits": [
+        "D1",
+        "D3"
+      ],
+      "outcome": {
+        "A": "TP",
+        "B": "TP",
+        "C": "TP",
+        "D": "TP",
+        "E": "TP"
+      }
+    },
+    {
+      "scenario": "abnormal_2",
+      "label": "attack",
+      "jti": "8eff3e6c-e7d3-407d-bab2-055138986244",
+      "n": 2,
+      "duration": 0.014294,
+      "max_rep": 1,
+      "max_tot": 2,
+      "max_dist": 2,
+      "hits": [
+        "D2",
+        "D3",
+        "D5"
+      ],
+      "outcome": {
+        "A": "TP",
+        "B": "TP",
+        "C": "TP",
+        "D": "TP",
+        "E": "TP"
+      }
+    },
+    {
+      "scenario": "abnormal_3",
+      "label": "attack",
+      "jti": "98d40459-da45-4ff9-9767-59c5523a93eb",
+      "n": 18,
+      "duration": 0.502108,
+      "max_rep": 6,
+      "max_tot": 18,
+      "max_dist": 3,
+      "hits": [
+        "D1",
+        "D3",
+        "D4",
+        "D4'"
+      ],
+      "outcome": {
+        "A": "TP",
+        "B": "TP",
+        "C": "TP",
+        "D": "TP",
+        "E": "TP"
+      }
+    },
+    {
+      "scenario": "abnormal_4",
+      "label": "attack",
+      "jti": "a281f6f5-9c1d-42a6-8753-87cd439d293c",
+      "n": 3,
+      "duration": 0.054021,
+      "max_rep": 2,
+      "max_tot": 3,
+      "max_dist": 2,
+      "hits": [
+        "D6"
+      ],
+      "outcome": {
+        "A": "FN",
+        "B": "FN",
+        "C": "TP",
+        "D": "TP",
+        "E": "TP"
+      }
+    },
+    {
+      "scenario": "abnormal_5",
+      "label": "attack",
+      "jti": "e8cdbf41-ee41-424b-af85-902b09e17d4c",
+      "n": 18,
+      "duration": 75.495981,
+      "max_rep": 1,
+      "max_tot": 3,
+      "max_dist": 3,
+      "hits": [],
+      "outcome": {
+        "A": "FN",
+        "B": "FN",
+        "C": "FN",
+        "D": "FN",
+        "E": "FN"
+      }
+    },
+    {
+      "scenario": "abnormal_6",
+      "label": "attack",
+      "jti": "58bf6f77-0797-4b60-a7aa-2765f8f46254",
+      "n": 18,
+      "duration": 0.498962,
+      "max_rep": 6,
+      "max_tot": 18,
+      "max_dist": 3,
+      "hits": [
+        "D4",
+        "D4'"
+      ],
+      "outcome": {
+        "A": "FN",
+        "B": "TP",
+        "C": "TP",
+        "D": "FN",
+        "E": "TP"
+      }
+    }
+  ],
+  "sets": {
+    "A": {
+      "rules": [
+        "D3"
+      ],
+      "description": "D3만 사용",
+      "TP": 3,
+      "FP": 0,
+      "FN": 3,
+      "TN": 2,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.667
+    },
+    "B": {
+      "rules": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "description": "D6 없음",
+      "TP": 4,
+      "FP": 1,
+      "FN": 2,
+      "TN": 1,
+      "precision": 0.8,
+      "recall": 0.667,
+      "f1": 0.727
+    },
+    "C": {
+      "rules": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D6"
+      ],
+      "description": "제안 구성",
+      "TP": 5,
+      "FP": 1,
+      "FN": 1,
+      "TN": 1,
+      "precision": 0.833,
+      "recall": 0.833,
+      "f1": 0.833
+    },
+    "D": {
+      "rules": [
+        "D1",
+        "D2",
+        "D3",
+        "D5",
+        "D6"
+      ],
+      "description": "C에서 D4 제외",
+      "TP": 4,
+      "FP": 0,
+      "FN": 2,
+      "TN": 2,
+      "precision": 1.0,
+      "recall": 0.667,
+      "f1": 0.8
+    },
+    "E": {
+      "rules": [
+        "D1",
+        "D2",
+        "D3",
+        "D4'",
+        "D5",
+        "D6"
+      ],
+      "description": "C에서 D4를 D4'로 교체",
+      "TP": 5,
+      "FP": 0,
+      "FN": 1,
+      "TN": 2,
+      "precision": 1.0,
+      "recall": 0.833,
+      "f1": 0.909
+    }
+  },
+  "sweep": [
+    {
+      "repeat_th": 2,
+      "TP": 5,
+      "FP": 2,
+      "FN": 1,
+      "TN": 0,
+      "precision": 0.714,
+      "recall": 0.833,
+      "f1": 0.769
+    },
+    {
+      "repeat_th": 3,
+      "TP": 5,
+      "FP": 1,
+      "FN": 1,
+      "TN": 1,
+      "precision": 0.833,
+      "recall": 0.833,
+      "f1": 0.833
+    },
+    {
+      "repeat_th": 4,
+      "TP": 5,
+      "FP": 1,
+      "FN": 1,
+      "TN": 1,
+      "precision": 0.833,
+      "recall": 0.833,
+      "f1": 0.833
+    },
+    {
+      "repeat_th": 5,
+      "TP": 5,
+      "FP": 1,
+      "FN": 1,
+      "TN": 1,
+      "precision": 0.833,
+      "recall": 0.833,
+      "f1": 0.833
+    },
+    {
+      "repeat_th": 6,
+      "TP": 5,
+      "FP": 0,
+      "FN": 1,
+      "TN": 2,
+      "precision": 1.0,
+      "recall": 0.833,
+      "f1": 0.909
+    },
+    {
+      "repeat_th": 7,
+      "TP": 5,
+      "FP": 0,
+      "FN": 1,
+      "TN": 2,
+      "precision": 1.0,
+      "recall": 0.833,
+      "f1": 0.909
+    },
+    {
+      "repeat_th": 8,
+      "TP": 5,
+      "FP": 0,
+      "FN": 1,
+      "TN": 2,
+      "precision": 1.0,
+      "recall": 0.833,
+      "f1": 0.909
+    }
+  ]
+}
