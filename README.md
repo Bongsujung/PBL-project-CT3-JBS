@@ -1,6 +1,12 @@
 # 실무클라우드보안 PBL Project
 **한국어** | [English](README_EN.md)
 
+> **Category 3 과제 결과물**
+>
+> 이 저장소는 [cclab-inu/Practical-Cloud-Security-PBL](https://github.com/cclab-inu/Practical-Cloud-Security-PBL)을 기반으로 합니다.
+> Category 3에 Audit Log 기반 탐지 실습을 추가했습니다(추가 시나리오 4개, `category3/detector/`, `category3/results/`).
+> 내용은 [category3/README.md의 "탐지 실습"](category3/README.md#탐지-실습)을 참고합니다.
+
 | 실습 | 관찰 도구 | 정상 행위 | 비정상 행위 |
 | --- | --- | --- | --- |
 | Category 1 | Falco | 설정·임시 파일·health check | shadow·token 접근, 셸 실행 |

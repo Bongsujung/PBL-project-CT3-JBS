@@ -2,6 +2,12 @@
 
 [한국어](README.md) | **English**
 
+> **Category 3 assignment**
+>
+> This repository is based on [cclab-inu/Practical-Cloud-Security-PBL](https://github.com/cclab-inu/Practical-Cloud-Security-PBL).
+> It adds an audit-log detection lab to Category 3 (4 additional scenarios, `category3/detector/`, `category3/results/`).
+> See ["Detection Lab" in category3/README_EN.md](category3/README_EN.md#detection-lab).
+
 This lab creates a three-node kind Kubernetes cluster on a single Linux VM. Students generate normal and abnormal activity and inspect it with Kubernetes security observability tools.
 
 | Category | Tool | Normal activity | Abnormal activity |
